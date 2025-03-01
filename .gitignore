@@ -2,6 +2,8 @@ cache/
 public/**/*.*
 !public/fonts/*.*
 !public/banniere.svg
+!public/menu-open.svg
+!public/menu-close.svg
 src/data
 
 # build output
