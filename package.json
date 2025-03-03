@@ -9,11 +9,14 @@
     "preview": "astro preview",
     "astro": "astro",
     "dev:style": "npx sass styles/index.scss public/style.css --watch",
-    "style": "npx sass styles/index.scss public/style.css"
+    "style": "npx sass styles/index.scss public/style.css",
+    "dev:script": "npx esbuild scripts/index.ts --bundle --sourcemap --outfile=public/script.js --watch",
+    "script": "npx esbuild scripts/index.ts --bundle --minify --outfile=public/script.js"
   },
   "dependencies": {
     "astro": "^5.3.0",
-    "nebula-atoms": "^2.1.1",
+    "esbuild": "^0.25.0",
+    "nebula-atoms": "^2.2.0",
     "nebula-genesis": "^2.0.6",
     "sass": "^1.83.4"
   }
