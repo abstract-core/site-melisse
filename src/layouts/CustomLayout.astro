@@ -3,17 +3,24 @@ import Layout from "nebula-atoms/Layout";
 import Navbar from "../components/Navbar.astro";
 import { SINCE, SITE_TITLE } from "../consts";
 import FooterSection from "../components/FooterSection.astro";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  title: string;
+  data: CollectionEntry<"pages">["data"];
 }
 
-const { title } = Astro.props;
+const {
+  data: { Name: title, Description: description, "Mots-clés": keywords },
+} = Astro.props;
+
+console.log(keywords);
 ---
 
 <Layout
   pageTitle={title}
   siteTitle={SITE_TITLE}
+  description={description || undefined}
+  keywords={keywords || undefined}
   since={SINCE}
   footerIcon={{
     alt: "Une illustration en attente",

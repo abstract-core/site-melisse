@@ -9,6 +9,6 @@ if (page.rendered?.html) page.rendered.html = extendHtml(page.rendered.html);
 const { Content } = await render(page);
 ---
 
-<CustomLayout title={page.data.Name}>
+<CustomLayout data={page.data}>
   <Content />
 </CustomLayout>
