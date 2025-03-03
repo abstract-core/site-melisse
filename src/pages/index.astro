@@ -4,7 +4,7 @@ import { getEntry } from "astro:content";
 import CustomLayout from "../layouts/CustomLayout.astro";
 import { extendHtml } from "nebula-atoms/extendHtml";
 
-const page = await getEntry("pages", "accueil")!;
+const page = await getEntry("pages", "1aabfa08-e7ee-8046-95d3-e6181b041d27")!;
 if (page.rendered?.html) page.rendered.html = extendHtml(page.rendered.html);
 const { Content } = await render(page);
 ---
