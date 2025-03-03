@@ -57,14 +57,14 @@ jobs:
             ON_OR_AFTER=${{ vars.ON_OR_AFTER_PAGES }} \
             FILTERS='[{ "property": "Contenu", "select": { "equals": "Pages" } }]'
 
-      - name: Build website
-        run: npm run build
-
       - name: Build style
         run: npm run style
 
       - name: Build script
         run: npm run script
+
+      - name: Build website
+        run: npm run build
 
       - name: FTP prod environment
         uses: sebastianpopp/ftp-action@releases/v2

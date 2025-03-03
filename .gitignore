@@ -1,6 +1,7 @@
 cache/
 public/**/*.*
 !public/fonts/*.*
+!public/favicon.svg
 !public/banniere.svg
 !public/menu-open.svg
 !public/menu-close.svg
