@@ -12,8 +12,6 @@ interface Props {
 const {
   data: { Name: title, Description: description, "Mots-clés": keywords },
 } = Astro.props;
-
-console.log(keywords);
 ---
 
 <Layout
@@ -28,7 +26,7 @@ console.log(keywords);
   }}
 >
   <Navbar slot="navbar" />
-  <div id="container" class="py-5">
+  <div id="container">
     <slot />
   </div>
   <FooterSection slot="footer" />
