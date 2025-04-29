@@ -1,6 +1,11 @@
 footer {
+  overflow: hidden;
+  position: relative;
   background: var(--primary);
   margin-top: 5rem;
+  > * {
+    z-index: 1;
+  }
   > :first-child {
     width: 262px;
     ul {
@@ -20,7 +25,12 @@ footer {
 }
 
 #footer-icon {
-  width: 360px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+  height: max-content;
 }
 
 #footer-site-title {

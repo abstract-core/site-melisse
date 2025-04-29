@@ -6,10 +6,9 @@
 @use "./components/footer";
 
 :root {
-  --bg: #f7facc;
-  --primary: #f4f41c;
-  --accent: #ff70ba;
-  --dark: #3a3a3a;
+  --bg: #111111;
+  --primary: #75695b;
+  --white: #fefefe;
 }
 
 @font-face {
@@ -25,7 +24,7 @@
 body {
   font-family: "open";
   background-color: var(--bg);
-  color: var(--dark);
+  color: var(--white);
 }
 
 h1,
@@ -38,23 +37,26 @@ h6 {
 }
 
 h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.375rem + 2.5vw);
 }
 h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.325rem + 1.4vw);
 }
 h3 {
-  font-size: calc(1.225rem + 0.6vw);
+  font-size: calc(1.225rem + 1vw);
 }
 
 p > a,
-#navbar-menu a,
-footer a {
-  color: var(--accent);
+footer a,
+#navbar-menu a {
+  background: var(--white);
+  color: var(--primary);
   font-family: "pangaia";
   font-weight: bold;
   font-size: 1.2rem;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  padding: 8px 12px 4px;
 }
 
 p > img {
@@ -79,7 +81,7 @@ blockquote {
 
 @mixin button {
   background-color: var(--primary);
-  color: var(--dark);
+  color: var(--white);
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 24px;

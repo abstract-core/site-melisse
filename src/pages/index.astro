@@ -1,11 +1,17 @@
 ---
 import { render } from "astro:content";
 import { getEntry } from "astro:content";
+import { videoTransformer } from "nebula-atoms/videoTransformer";
+import { carouselTransformer } from "nebula-atoms/carouselTransformer";
 import CustomLayout from "../layouts/CustomLayout.astro";
 import { extendHtml } from "nebula-atoms/extendHtml";
 
-const page = await getEntry("pages", "1aabfa08-e7ee-8046-95d3-e6181b041d27")!;
-if (page.rendered?.html) page.rendered.html = extendHtml(page.rendered.html);
+const page = await getEntry("pages", "1a0bfa08-e7ee-8190-8e88-fd49e38d837a")!;
+if (page.rendered?.html)
+  page.rendered.html = extendHtml(page.rendered.html, {
+    video: videoTransformer,
+    carousel: carouselTransformer,
+  });
 const { Content } = await render(page);
 ---
 

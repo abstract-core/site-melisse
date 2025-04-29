@@ -1,5 +1,7 @@
 ---
 import { extendHtml } from "nebula-atoms/extendHtml";
+import { videoTransformer } from "nebula-atoms/videoTransformer";
+import { carouselTransformer } from "nebula-atoms/carouselTransformer";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 import CustomLayout from "../layouts/CustomLayout.astro";
@@ -18,7 +20,10 @@ export async function getStaticPaths() {
             ...page,
             rendered: {
               ...page.rendered,
-              html: extendHtml(page.rendered!.html),
+              html: extendHtml(page.rendered!.html, {
+                video: videoTransformer,
+                carousel: carouselTransformer,
+              }),
             },
           },
         },

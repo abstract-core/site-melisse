@@ -55,7 +55,8 @@ jobs:
             ASTRO_COLLECTION_NAME=pages \
             REINIT_CACHE=${{ vars.REINIT_CACHE_PAGES }} \
             ON_OR_AFTER=${{ vars.ON_OR_AFTER_PAGES }} \
-            FILTERS='[{ "property": "Contenu", "select": { "equals": "Pages" } }]'
+            FILTERS='[{ "property": "Contenu", "select": { "equals": "Pages" } }]' \
+            CONTAINER_WIDTH=${{ vars.CONTAINER_WIDTH }}
 
       - name: Build style
         run: npm run style
