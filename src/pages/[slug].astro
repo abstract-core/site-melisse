@@ -20,10 +20,16 @@ export async function getStaticPaths() {
             ...page,
             rendered: {
               ...page.rendered,
-              html: extendHtml(page.rendered!.html, {
-                video: videoTransformer,
-                carousel: carouselTransformer,
-              }),
+              html: extendHtml(
+                page.rendered!.html,
+                {
+                  video: videoTransformer,
+                  carousel: carouselTransformer,
+                },
+                {
+                  thumbnailFirst: true,
+                }
+              ),
             },
           },
         },

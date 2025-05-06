@@ -8,10 +8,14 @@ import { extendHtml } from "nebula-atoms/extendHtml";
 
 const page = await getEntry("pages", "1a0bfa08-e7ee-8190-8e88-fd49e38d837a")!;
 if (page.rendered?.html)
-  page.rendered.html = extendHtml(page.rendered.html, {
-    video: videoTransformer,
-    carousel: carouselTransformer,
-  });
+  page.rendered.html = extendHtml(
+    page.rendered.html,
+    {
+      video: videoTransformer,
+      carousel: carouselTransformer,
+    },
+    { thumbnailFirst: true }
+  );
 const { Content } = await render(page);
 ---
 

@@ -6,9 +6,9 @@
 @use "./components/footer";
 
 :root {
-  --bg: #111111;
-  --primary: #75695b;
+  --bg: #75695b;
   --white: #fefefe;
+  --black: #000000;
 }
 
 @font-face {
@@ -46,11 +46,11 @@ h3 {
   font-size: calc(1.225rem + 1vw);
 }
 
-p > a,
+p a,
 footer a,
 #navbar-menu a {
   background: var(--white);
-  color: var(--primary);
+  color: var(--black);
   font-family: "pangaia";
   font-weight: bold;
   font-size: 1.2rem;
@@ -73,14 +73,14 @@ h3 {
 
 blockquote {
   margin-top: 4rem;
-  background-color: var(--primary);
+  background-color: var(--black);
   border-radius: 8px;
   margin: 0;
   padding: 1rem 2rem;
 }
 
 @mixin button {
-  background-color: var(--primary);
+  background-color: var(--black);
   color: var(--white);
   padding: 8px 16px;
   text-decoration: none;

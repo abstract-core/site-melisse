@@ -3,9 +3,6 @@ footer {
   position: relative;
   background: var(--primary);
   margin-top: 5rem;
-  > * {
-    z-index: 1;
-  }
   > :first-child {
     width: 262px;
     ul {
@@ -30,12 +27,15 @@ footer {
   left: 0;
   top: 0;
   opacity: 0.3;
-  height: max-content;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
 }
 
 #footer-site-title {
   font-family: "pangaia";
-  font-size: 4.5rem;
+  font-size: 2rem;
   margin: 1.5rem 0;
 }
 

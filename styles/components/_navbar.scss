@@ -8,15 +8,15 @@
     top: 0;
     width: 100%;
     opacity: 0.3;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
 }
 #navbar-brand {
-  font-size: 2rem;
   color: var(--white);
   font-family: "pangaia";
   > :first-child {
-    font-size: calc(2.5rem + 2vw);
-    line-height: calc(2.5rem + 2vw);
+    font-size: calc(1.225rem + 1vw);
+    line-height: calc(1.225rem + 1vw);
     padding: 16px 16px 4px;
   }
   /* > :last-child {

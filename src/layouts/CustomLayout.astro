@@ -15,14 +15,16 @@ const {
 ---
 
 <Layout
+  lang="fr"
   pageTitle={title}
   siteTitle={SITE_TITLE}
   description={description || undefined}
   keywords={keywords || undefined}
+  noIndex={import.meta.env.NO_INDEX}
   since={SINCE}
   footerIcon={{
-    alt: "Une illustration en attente",
-    src: "/favicon.svg",
+    alt: "Des motifs en pointillés",
+    src: "/banniere.svg",
   }}
 >
   <Navbar slot="navbar" />
